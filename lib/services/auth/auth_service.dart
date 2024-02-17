@@ -1,8 +1,5 @@
-import 'dart:ui';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 
 class AuthService extends ChangeNotifier {
@@ -13,8 +10,8 @@ class AuthService extends ChangeNotifier {
   final FirebaseFirestore _firebase = FirebaseFirestore.instance;
 
   // sign user in
-  Future<UserCredential> signInWithEmailAndPassword(String email,
-      String password) async {
+  Future<UserCredential> signInWithEmailAndPassword(
+      String email, String password) async {
     try {
       // sign in
       UserCredential userCredential = await _firebaseAuth
@@ -35,8 +32,8 @@ class AuthService extends ChangeNotifier {
   }
 
 // create a new user
-  Future<UserCredential> signUpWithEmailAndPassword(String email,
-      String password) async {
+  Future<UserCredential> signUpWithEmailAndPassword(
+      String email, String password) async {
     try {
       UserCredential userCredential = await _firebaseAuth
           .createUserWithEmailAndPassword(email: email, password: password);
