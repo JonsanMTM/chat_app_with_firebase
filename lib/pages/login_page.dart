@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 50),
 
                     //welcome back message
-                    Text(
+                    const Text(
                       "welcome back you have been missed !",
                       style: TextStyle(
                         fontSize: 16,
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         GestureDetector(
                           onTap: widget.onTap,
-                          child: Text(
+                          child: const Text(
                             "Register now",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
